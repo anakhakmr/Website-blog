@@ -1,0 +1,16 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= p1 %></p>
+<% postTitle.forEach(function(post){ %>
+ <h1><%= post.title %></h1> %>
+  <p><%= post.content.substring(0,100)+"..." %>
+  <a href="/post/<%= post.title %>">Read More</a>
+  </p>
+<%  }) %>
+
+<%- include("partials/footer")-%>
+
+<!-- for(var i=0; i<postTitle.length;i++){
+  console.log(postTitle[i].title+" "+postTitle[i].content);
+    console.log("---------------");
+ }  -->
